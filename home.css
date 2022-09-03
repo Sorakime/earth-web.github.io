@@ -1,0 +1,20 @@
+body {
+	background-color: #000;
+}
+
+.start {
+	background: rgb(0, 0, 0);
+	position: fixed;
+	top: 30%;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+.start p {
+	top: 100%;
+	left: 100%;
+}
+
+.img_logo {
+	width: 400px;
+}
