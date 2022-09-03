@@ -44,26 +44,16 @@
 </style>
 </head>
 <body>
-	<div data-onsuccess="onSignIn"></div>
+	<div class="g-signin2" data-onsuccess="onSignIn"></div>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script>
 function onSignIn(googleUser) {
-    var id_token = googleUser.getAuthResponse().id_token;
-    $.ajax({
-        type: "POST",
-        url: "login.php",
-        data:{ 'token':id_token, },
-        dataType :'json',
-    }).done(function(json){
-        var html = "";
-        var key;
-        for (key in json){
-            html += "<p>"+key+" => "+json[key]+"</p>";
-        }
-        $("#data").html(html);
-    });
+  var profile = googleUser.getBasicProfile();
+  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  console.log('Name: ' + profile.getName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
 }
 </script>
-<div id="data"></div>
 </body>
 </html>
