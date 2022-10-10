@@ -3,12 +3,26 @@
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
+  text-align: center;
 }
  
 .background-1 {
   background-image: url(../img/vscodecap.jpg);
+  margin: -8px; 
 }
  
 .background-2 {
-  background-image: url();
+  background-image: url(../img/);
+}
+
+h1 {
+  margin: 0;
+  color: aqua;
+}
+
+p {
+  margin: 0;
+  color: #fff;
+  font-size: 4em;
+  font-family: 'Kaisei Decol', serif;
 }
