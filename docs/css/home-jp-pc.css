@@ -1,7 +1,9 @@
-@import url('https://fonts.googleapis.com/css2? family= Zen+Kurenaido & display=swap');
+/* PC */
+
+@media screen and (min-width: 480px) {
 
 body {
-  background: #0077ff;
+  background: #ffffff;
 }
 .fixed-background {
   min-height: 100vh;
@@ -28,9 +30,10 @@ p {
   margin: 0;
   padding-left: 15%;
   padding-top: 15%;
-  color: #0077ff;
+  color: #ffffff;
   font-size: 7em;
   font-family: 'Kaisei Opti', serif;
+  text-shadow: 0 0 15px #cacaca;
 }
 
 .container {
@@ -66,7 +69,6 @@ p {
   height: 100%;
   width: 51%;
   background: #ffffff;
-  opacity: 0.5;
 }
 
 .chevron:before {
@@ -82,7 +84,7 @@ p {
 
 @keyframes move {
   0% {
-    opacity: 0.2;
+    opacity: 0;
 
   }
   50%{
@@ -99,16 +101,34 @@ p {
   display: block;
   margin-top: 75px;
   font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
-  font-size: 12px;
+  font-size: 1em;
   opacity: 0.5;
   color: #fff;
   text-transform: uppercase;
   white-space: nowrap;
-  opacity: 0.5;
 }
 
 @keyframes pulse {
   to {
     opacity: 1;
   }
+}
+#fixed-header {
+  position: fixed;
+  top: -70px;
+  width: 100%;
+  margin-left: -8px;
+  height: 70px;
+  line-height: 70px;
+  font-size: 2em;
+  text-align: center;
+  color: #fff;
+  background: rgb(0, 0, 0);
+  box-sizing: border-box;
+  transition: .4s;
+}
+#fixed-header.is-show {
+  top: 0;
+}
+
 }

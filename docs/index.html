@@ -3,7 +3,14 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/home.css">
+    <!-- jp-pc -->
+    <link rel="stylesheet" href="css/home-jp-pc.css">
+    <!-- en-pc -->
+    <link rel="stylesheet" href="css/home-en-pc.css">
+    <!-- jp-mobile -->
+    <link rel="stylesheet" href="css/home-jp-mobile.css">
+    <!-- en-pc -->
+    <link rel="stylesheet" href="css/home-en-mobile.css">
 
     <!-- GoogleFont -->
 
@@ -17,8 +24,10 @@
     <title>earth[HOME]</title>
   </head>
   <body>
+  <div id="fixed-header">Fixed Header</div>
     <div class="fixed-background background-1">
       <p>ようこそ</p>
+      <!-- scroll-animation -->
       <div class="container">
         <div class="chevron"></div>
         <div class="chevron"></div>
@@ -38,5 +47,18 @@
     <div class="scroll-background background-color-2">
       <p>コンテンツ</p>
     </div>
+    <script>
+      (function() {
+  const fh = document.getElementById('fixed-header');
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 800) {
+      fh.classList.add('is-show');
+    } else {
+      fh.classList.remove('is-show');
+    }
+  });
+}());
+
+    </script>
   </body>
 </html>
