@@ -5,6 +5,8 @@
 body {
   background: #ffffff;
 }
+
+/* background */
 .fixed-background {
   min-height: 100vh;
   background-attachment: fixed;
@@ -16,17 +18,9 @@ body {
   background-image: url(../img/vscodecap.jpg);
   margin: -8px; 
 }
- 
-.background-2 {
-  background-image: url(../img/);
-}
 
-h1 {
-  margin: 0;
-  color: aqua;
-}
-
-p {
+/* ようこそ */
+.fixed-background p {
   margin: 0;
   padding-left: 15%;
   padding-top: 15%;
@@ -36,6 +30,7 @@ p {
   text-shadow: 0 0 15px #cacaca;
 }
 
+/* scroll */
 .container {
   display: flex;
   justify-content: center;
@@ -113,7 +108,9 @@ p {
     opacity: 1;
   }
 }
-#fixed-header {
+
+/* header */
+#header {
   position: fixed;
   top: -70px;
   width: 100%;
@@ -123,12 +120,28 @@ p {
   font-size: 2em;
   text-align: center;
   color: #fff;
-  background: rgb(0, 0, 0);
+  background: #000000;
   box-sizing: border-box;
   transition: .4s;
 }
-#fixed-header.is-show {
+#header.is-show {
   top: 0;
 }
+
+}
+
+/* 一般 */
+.profileimg img {
+  border-radius: 50%;
+  width: 10%;
+  height: 10%;
+  margin: 8px;
+}
+
+.profile {
+
+}
+
+.profile-description {
 
 }

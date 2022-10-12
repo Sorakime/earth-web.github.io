@@ -24,10 +24,12 @@
     <title>earth[HOME]</title>
   </head>
   <body>
-  <div id="fixed-header">Fixed Header</div>
+  <div id="header">
+    <div class="headerimg"></div>
+  </div>
     <div class="fixed-background background-1">
       <p>ようこそ</p>
-      <!-- scroll-animation -->
+      <!-- scrollanimation -->
       <div class="container">
         <div class="chevron"></div>
         <div class="chevron"></div>
@@ -35,30 +37,32 @@
         <span class="text">Scroll</span>
       </div>
     </div>
+    <div>
+      <span class="profileimg">
+        <img src="img/icon.png" alt="">
+      </span>
+      <span class="profile">
+        EARTH
+      </span>
+      <span class="profile-description">
+        <p>
 
-    <div class="scroll-background  background-color-1">
-      <p>コンテンツ</p>
+        </p>
+      </span>
     </div>
-     
-    <div class="fixed-background background-2">
-      <h1>見出し</h1>
-    </div>
-     
-    <div class="scroll-background background-color-2">
-      <p>コンテンツ</p>
-    </div>
+
+    <!-- js -->
     <script>
       (function() {
-  const fh = document.getElementById('fixed-header');
+  const fh = document.getElementById('header');
   window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 800) {
+    if (window.pageYOffset > 10) {
       fh.classList.add('is-show');
     } else {
       fh.classList.remove('is-show');
     }
   });
 }());
-
     </script>
   </body>
 </html>
