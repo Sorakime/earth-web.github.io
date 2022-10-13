@@ -131,12 +131,17 @@ body {
 }
 
 /* 一般 */
+.profileimg {
+
+}
+
 .profileimg img {
   border-radius: 50%;
-  width: 10%;
-  height: 10%;
-  margin: 8px;
+  display: block;
+  margin: 100px auto 0 auto;
 }
+
+
 
 .profile {
 
