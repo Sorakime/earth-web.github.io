@@ -2,7 +2,7 @@
 
 @media screen and (max-width: 480px) {
   body {
-    background: #ffffff;
+    background: #000000;
   }
   .fixed-background {
     min-height: 100vh;
@@ -113,4 +113,28 @@
       opacity: 1;
     }
   }
+  
+  .profile p {
+    font-size: 2em;
+  }
+
+  .profileimg img {
+    width: 70%;
+    border-radius: 50%;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .description{
+    color: #fff;
+  }
+
+  .description-v {
+    color: #fff;
+  }
+
+  .ol-pro {
+    color: #fff;
+  } 
 }
