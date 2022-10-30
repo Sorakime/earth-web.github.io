@@ -1,18 +1,19 @@
 document.querySelector('#footer').innerHTML = `
-    <main id="main1">
+    <div class="footer">
       <div class="tos">
-        <p>
+        <a src="tos.html">
           利用規約
-        </p>
+        </a>
       </div>
       <div class="pp">
-        <p>
+        <a src="pp.html">
           プライバシーポリシー
-        </p>
+        </a>
       </div>
       <div class="gc">
-        <p>
+        <a src="https://www.graphicscreate.net/">
           GraphicsCreate
-        </p>
+        </a>
       </div>
-    </main>`;
+    </div>
+`;
