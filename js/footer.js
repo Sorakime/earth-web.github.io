@@ -1,17 +1,23 @@
 document.querySelector('#footer').innerHTML = `
     <div class="footer">
       <div class="tos">
-        <a src="tos.html">
+        <a href="tos.html">
           利用規約
         </a>
       </div>
+      <div class="vertical">
+      |
+      </div>
       <div class="pp">
-        <a src="pp.html">
+        <a href="pp.html">
           プライバシーポリシー
         </a>
       </div>
+      <div class="vertical">
+      |
+      </div>
       <div class="gc">
-        <a src="https://www.graphicscreate.net/">
+        <a href="https://www.graphicscreate.net/">
           GraphicsCreate
         </a>
       </div>
