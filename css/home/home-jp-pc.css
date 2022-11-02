@@ -131,6 +131,7 @@ body {
   color: #fff;
   font-size: 4em;
   text-align: center;
+  font-family: 'Zen Maru Gothic', sans-serif;
 }
 
 .profileimg img {
@@ -146,18 +147,20 @@ body {
   font-size: 1.5em;
   color: #fff;
   white-space: pre-line;
+  font-family: 'Zen Maru Gothic', sans-serif;
 }
 
 .list {
   text-align: center;
   font-size: 1.5em;
   color: #fff;
-
+  font-family: 'Zen Maru Gothic', sans-serif;
 }
 
 .description-v {
   margin: 0 30% 0 30%;
   font-size: 1.5em;
   color: #fff;
+  font-family: 'Zen Maru Gothic', sans-serif;
 }
 }
