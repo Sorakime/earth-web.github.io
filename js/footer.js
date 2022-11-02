@@ -22,4 +22,5 @@ document.querySelector('#footer').innerHTML = `
         </a>
       </div>
     </div>
+    <div></div>
 `;
