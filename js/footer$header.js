@@ -1,7 +1,7 @@
 document.querySelector('#footer').innerHTML = `
     <div class="footer">
       <div class="tos">
-        <a href="tos.html">
+        <a href="tos/tos.html">
           利用規約
         </a>
       </div>
@@ -9,7 +9,7 @@ document.querySelector('#footer').innerHTML = `
       |
       </div>
       <div class="pp">
-        <a href="pp.html">
+        <a href="pp/pp.html">
           プライバシーポリシー
         </a>
       </div>
