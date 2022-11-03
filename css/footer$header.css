@@ -36,3 +36,29 @@ footer a:hover {
   justify-content: center;
   align-items: center;
 }
+
+#rheader a img {
+  width: 70px;
+}
+
+#rheader {
+  display: flex;
+}
+
+.headerda {
+  margin-left: 500px;
+}
+
+.header-link {
+  margin-left: 700px;
+}
+
+.header-link div a {
+  text-decoration: none;
+  color: #aaa;
+}
+
+.header-link div a:hover {
+  color: #fff;
+  font-size: 33px;
+}
