@@ -9,7 +9,7 @@
 .footer a {
   color: #00ca54;
   text-decoration: none;
-  font-size: 23px;  
+  font-size: 20px;  
 }
 
 footer a:hover {
@@ -19,4 +19,20 @@ footer a:hover {
 .vertical {
   margin: 0 10px 0 10px;
   font-size: 20px;
+}
+
+.ayear {
+  color: #fff;
+  margin-left: -8px;
+  margin-right: -6px;
+  margin-top: 10px;
+  margin-bottom: -10px;
+  padding: 20px;
+  background-color: black;
+}
+
+.ayear div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

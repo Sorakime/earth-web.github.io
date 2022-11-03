@@ -17,10 +17,19 @@ document.querySelector('#footer').innerHTML = `
       |
       </div>
       <div class="gc">
-        <a href="https://www.graphicscreate.net/">
+        <a href="https://graphicscreate.github.io/GraphicsCreate/">
           GraphicsCreate
         </a>
       </div>
     </div>
-    <div></div>
+    <div class="ayear">
+      <div>
+        © EARTH 2022-
+      <div>
+      <div id="year">
+      </div>
+    </div>
 `;
+  date = new Date();
+  year = date.getFullYear();
+  document.getElementById("year").innerHTML = year;
