@@ -56,9 +56,12 @@ footer a:hover {
 .header-link div a {
   text-decoration: none;
   color: #aaa;
+  transition: all 0.3s ease-out;
+  font-size: 24px;
+  font-family: 'Kaushan Script', cursive;
 }
 
 .header-link div a:hover {
   color: #fff;
-  font-size: 33px;
+  font-size: 25px;
 }
