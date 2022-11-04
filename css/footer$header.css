@@ -37,31 +37,18 @@ footer a:hover {
   align-items: center;
 }
 
-#rheader a img {
-  width: 70px;
+.i-main {
+  background-color: #fff;
+  width: 50%;
+  height: 42px;
+  margin: 0 auto;
+  border-radius: 10px;
 }
 
-#rheader {
-  display: flex;
-}
-
-.headerda {
-  margin-left: 500px;
-}
-
-.header-link {
-  margin-left: 700px;
-}
-
-.header-link div a {
-  text-decoration: none;
-  color: #aaa;
-  transition: all 0.3s ease-out;
-  font-size: 24px;
-  font-family: 'Kaushan Script', cursive;
-}
-
-.header-link div a:hover {
-  color: #fff;
-  font-size: 25px;
+.title-i {
+  color: #000;
+  margin-top: 10px;
+  padding-left: 20px;
+  padding-top: 10px;
+  font-size: 20px;
 }
