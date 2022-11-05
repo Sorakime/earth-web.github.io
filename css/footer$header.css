@@ -1,3 +1,5 @@
+@media screen and (min-width: 480px){
+
 .footer {
   display: flex;
   color: #fff;
@@ -64,4 +66,96 @@ footer a:hover {
 .header-link div a:hover {
   color: #fff;
   font-size: 25px;
+}
+
+ion-icon {
+  font-size: 25px;
+  margin-top: 5px;
+}
+
+.github {
+  margin-right: 5px;
+}
+
+}
+
+@media screen and (max-width: 480px){
+  .footer {
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Zen Maru Gothic', sans-serif;
+  }
+  
+  .footer a {
+    color: #00ca54;
+    text-decoration: none;
+    font-size: 20px;  
+  }
+  
+  footer a:hover {
+    color: #7e7e7e;
+  }
+  
+  .vertical {
+    margin: 0 10px 0 10px;
+    font-size: 20px;
+  }
+  
+  .ayear {
+    color: #fff;
+    margin-left: -8px;
+    margin-right: -6px;
+    margin-top: 10px;
+    margin-bottom: -10px;
+    padding: 20px;
+    background-color: black;
+  }
+  
+  .ayear div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #rheader a img {
+    width: 70px;
+  }
+  
+  #rheader {
+    display: flex;
+  }
+  
+  .headerda {
+    margin-left: 500px;
+  }
+  
+  .header-link {
+    margin-left: 700px;
+  }
+  
+  .header-link div a {
+    text-decoration: none;
+    color: #aaa;
+    transition: all 0.3s ease-out;
+    font-size: 24px;
+    font-family: 'Kaushan Script', cursive;
+  }
+  
+  .header-link div a:hover {
+    color: #fff;
+    font-size: 25px;
+  }
+  
+  ion-icon {
+    font-size: 25px;
+    margin-top: 5px;
+  }
+  
+  .github {
+    margin-right: 5px;
+  }
+  
+  }
 }
