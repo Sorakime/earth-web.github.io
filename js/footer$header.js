@@ -36,25 +36,10 @@ document.querySelector('#footer').innerHTML = `
     </div>
   `;
 document.querySelector('#rheader').innerHTML = `
-  <div class="headerda">
-    <a href="https://earth-web.github.io/">
-      <img src="img/icon 01.png"></img>
-    </a>
-  </div>
-  <div class="header-link">
-    <div class="header-link-f">
-      <a href="blog/bloghome.html">BLOG</a>
-    </div>
-    <div class="header-link-s">
-      <a href="">
-
-      </a>
-    </div>
-    <div class="header-link-t">
-      <a href="">
-
-      </a>
-    </div>
+  <div class="i">
+    <div class="i-main">
+      <div class="title-i">fdsada</div>
+    <div>
   </div>
   `;
   date = new Date();

@@ -39,12 +39,12 @@ footer a:hover {
   align-items: center;
 }
 
-#rheader a img {
-  width: 70px;
-}
-
-#rheader {
-  display: flex;
+.i-main {
+  background-color: #fff;
+  width: 50%;
+  height: 42px;
+  margin: 0 auto;
+  border-radius: 10px;
 }
 
 .headerda {
@@ -157,5 +157,11 @@ ion-icon {
     margin-right: 5px;
   }
   
+  .title-i {
+    color: #000;
+    margin-top: 10px;
+    padding-left: 20px;
+    padding-top: 10px;
+    font-size: 20px;
   }
 }
