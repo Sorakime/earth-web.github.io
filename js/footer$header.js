@@ -39,11 +39,14 @@ document.querySelector('#rheader').innerHTML = `
   <div class="i">
     <div class="i-main">
       <div class="title-i">
-        fdsada
-      </div>
-    <div>
+        <ion-icon class="lockicon" name="lock-closed-outline"></ion-icon>
+    </div>
   </div>
   `;
   date = new Date();
   year = date.getFullYear();
   document.getElementById("year").innerHTML = year;
+  
+  var title = document.title;
+  var target = document.getElementById('title-i');
+  target.innerHTML = title;
