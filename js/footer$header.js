@@ -38,7 +38,9 @@ document.querySelector('#footer').innerHTML = `
 document.querySelector('#rheader').innerHTML = `
   <div class="i">
     <div class="i-main">
-      <div class="title-i">fdsada</div>
+      <div class="title-i">
+        fdsada
+      </div>
     <div>
   </div>
   `;

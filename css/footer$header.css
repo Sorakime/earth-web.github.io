@@ -39,35 +39,6 @@ footer a:hover {
   align-items: center;
 }
 
-.i-main {
-  background-color: #fff;
-  width: 50%;
-  height: 42px;
-  margin: 0 auto;
-  border-radius: 10px;
-}
-
-.headerda {
-  margin-left: 500px;
-}
-
-.header-link {
-  margin-left: 700px;
-}
-
-.header-link div a {
-  text-decoration: none;
-  color: #aaa;
-  transition: all 0.3s ease-out;
-  font-size: 24px;
-  font-family: 'Kaushan Script', cursive;
-}
-
-.header-link div a:hover {
-  color: #fff;
-  font-size: 25px;
-}
-
 ion-icon {
   font-size: 25px;
   margin-top: 5px;
@@ -75,6 +46,22 @@ ion-icon {
 
 .github {
   margin-right: 5px;
+}
+
+.title-i {
+  color: #000;
+  margin-top: 10px;
+  padding-left: 20px;
+  padding-top: 10px;
+  font-size: 20px;
+}
+
+.i-main {
+  background-color: #fff;
+  width: 50%;
+  height: 42px;
+  margin: 10px auto;
+  border-radius: 10px;
 }
 
 }
