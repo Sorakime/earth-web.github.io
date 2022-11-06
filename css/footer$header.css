@@ -1,3 +1,5 @@
+@media screen and (min-width: 480px){
+
 .footer {
   display: flex;
   color: #fff;
@@ -37,12 +39,13 @@ footer a:hover {
   align-items: center;
 }
 
-.i-main {
-  background-color: #fff;
-  width: 50%;
-  height: 42px;
-  margin: 0 auto;
-  border-radius: 10px;
+ion-icon {
+  font-size: 25px;
+  margin-top: 5px;
+}
+
+.github {
+  margin-right: 5px;
 }
 
 .title-i {
@@ -51,4 +54,81 @@ footer a:hover {
   padding-left: 20px;
   padding-top: 10px;
   font-size: 20px;
+}
+
+.i-main {
+  background-color: #fff;
+  width: 50%;
+  height: 42px;
+  margin: 10px auto;
+  border-radius: 20px;
+}
+
+}
+
+@media screen and (max-width: 480px){
+  .footer {
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Zen Maru Gothic', sans-serif;
+  }
+  
+  .footer a {
+    color: #00ca54;
+    text-decoration: none;
+    font-size: 20px;  
+  }
+  
+  footer a:hover {
+    color: #7e7e7e;
+  }
+  
+  .vertical {
+    margin: 0 10px 0 10px;
+    font-size: 20px;
+  }
+  
+  .ayear {
+    color: #fff;
+    margin-left: -8px;
+    margin-right: -6px;
+    margin-top: 10px;
+    margin-bottom: -10px;
+    padding: 20px;
+    background-color: black;
+  }
+  
+  .ayear div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  ion-icon {
+    font-size: 25px;
+    margin-top: 5px;
+  }
+  
+  .github {
+    margin-right: 5px;
+  }
+  
+  .title-i {
+  color: #000;
+  margin-top: 10px;
+  padding-left: 20px;
+  padding-top: 10px;
+  font-size: 20px;
+}
+
+  .i-main {
+  background-color: #fff;
+  width: 50%;
+  height: 42px;
+  margin: 10px auto;
+  border-radius: 10px;
+}
+
 }

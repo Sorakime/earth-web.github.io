@@ -1,14 +1,6 @@
 document.querySelector('#footer').innerHTML = `
     <div class="footer">
       <div class="tos">
-        <a href="tos/tos.html">
-          利用規約
-        </a>
-      </div>
-      <div class="vertical">
-      |
-      </div>
-      <div class="pp">
         <a href="pp/pp.html">
           プライバシーポリシー
         </a>
@@ -16,9 +8,22 @@ document.querySelector('#footer').innerHTML = `
       <div class="vertical">
       |
       </div>
-      <div class="gc">
+      <div>
         <a href="#">
           お問い合わせ
+        </a>
+      </div>
+      <div class="vertical">
+      |
+      </div>
+      <div class="github">
+        <a href="https://github.com/earth-web">
+        <ion-icon name="logo-github"></ion-icon>
+        </a>
+      </div>
+      <div class="twitter">
+        <a href="https://twitter.com/earth_ryzen5">
+          <ion-icon name="logo-twitter"></ion-icon>
         </a>
       </div>
     </div>
@@ -33,10 +38,15 @@ document.querySelector('#footer').innerHTML = `
 document.querySelector('#rheader').innerHTML = `
   <div class="i">
     <div class="i-main">
-      <div class="title-i">fdsada</div>
-    <div>
+      <div class="title-i">
+        <ion-icon class="lockicon" name="lock-closed-outline"></ion-icon>
+    </div>
   </div>
   `;
   date = new Date();
   year = date.getFullYear();
   document.getElementById("year").innerHTML = year;
+  
+  var title = document.title;
+  var target = document.getElementById('title-i');
+  target.innerHTML = title;
