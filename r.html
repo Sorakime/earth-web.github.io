@@ -6,16 +6,33 @@
 <h1>バッテリー情報</h1>
 <ul>
   <li>バッテリー残量(%):<span id="level"></span>[%]
-  <li>充電中:<span id="charging" class="charging"></span>
+    <script type="text/javascript" src="js/sample.js"></script>
+</head>
+<body>
+<h1>バッテリーが充電されているか調べる</h1>
+<form>
+<input type="button" onclick="check()" value="チェック">
+</form>
+<div id="result"></div>
 </ul>
  
 <script>
 navigator.getBattery().then(function(battery) {
   document.getElementById('level').innerHTML = (battery.level * 100);
-  document.getElementById('charging').innerHTML = battery.charging;
-  const charging = 'charging';
-  const regex = /charging/i;
-  document.getElementById("charging").innerHTML = (charging.replace(regex, 'dsadsa'));
 
 });
+
+function check(){
+var ele = document.getElementById("result");
+var battery = navigator.battery || navigator.mozBattery;
+if (!battery){
+ele.innerHTML = "未対応です";
+return;
+}
+if (battery.charging){
+ele.innerHTML = "充電中です";
+}else{
+ele.innerHTML = "充電していません";
+}
+}
 </script>
