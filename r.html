@@ -1,18 +1,16 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<meta name="viewport" content="initial-scale=1.0">
-<title>バッテリー情報</title>
-<link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
- 
-<h1>バッテリー情報</h1>
-<ul>
-  <li>バッテリー残量(%):<span id="level"></span>[%]
-    <script type="text/javascript" src="js/sample.js"></script>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>バッテリー情報</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+  <h1>バッテリー情報</h1>
+  <ul>
+    <li>バッテリー残量(%):<span id="level"></span>[%]
+    <script type="text/javascript" src="js/sample.js"></script>
     <div class="container">
       <div id="battery">
         <div id="charge"></div>
@@ -20,55 +18,57 @@
       </div>
       <div id="charging-time"><ion-icon name="battery-full-outline"></ion-icon></div>
     </div>
-</body>
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-<script>
-navigator.getBattery().then(function(battery) {
-  document.getElementById('level').innerHTML = (battery.level * 100);
+  </ul>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script>
+  navigator.getBattery().then(function(battery) {
+    document.getElementById('level').innerHTML = (battery.level * 100);
 
-});const chargeLevel = document.getElementById("charge-level");
-const charge = document.getElementById("charge");
-const chargingTimeRef = document.getElementById("charging-time");
+  });const chargeLevel = document.getElementById("charge-level");
+  const charge = document.getElementById("charge");
+  const chargingTimeRef = document.getElementById("charging-time");
 
-navigator.getBattery().then((battery) => {
-  function updateAllBatteryInfo() {
-    updateChargingInfo();
-    updateLevelInfo();
-  }
-  updateAllBatteryInfo();
-
-  battery.addEventListener("chargingchange", () => {
-    updateAllBatteryInfo();
-  });
-
-  battery.addEventListener("levelchange", () => {
-    updateAllBatteryInfo();
-  });
-
-  function updateChargingInfo() {
-    if (battery.charging) {
-      charge.classList.add("active");
-      chargingTimeRef.innerText;
-      document.querySelector('#charging-time').innerHTML = `<ion-icon name="battery-charging-outline"></ion-icon>`;
-    } 
-    
-    else {
-      charge.classList.remove("active");
-
-      if (parseInt(battery.dischargingTime)) {
-        charge.classList.add("s");
-        chargingTimeRef.innerText;
-        document.querySelector('#charging-time').innerHTML = `<ion-icon name="battery-full-outline"></ion-icon>`;
-      }
-      
+  navigator.getBattery().then((battery) => {
+    function updateAllBatteryInfo() {
+      updateChargingInfo();
+      updateLevelInfo();
     }
-  }
+    updateAllBatteryInfo();
 
-  function updateLevelInfo() {
-    let batteryLevel = `${parseInt(battery.level * 100)}%`;
-    charge.style.width = batteryLevel;
-    chargeLevel.textContent = batteryLevel;
-  }
-});
-</script>
+    battery.addEventListener("chargingchange", () => {
+      updateAllBatteryInfo();
+    });
+
+    battery.addEventListener("levelchange", () => {
+      updateAllBatteryInfo();
+    });
+
+    function updateChargingInfo() {
+      if (battery.charging) {
+        charge.classList.add("active");
+        chargingTimeRef.innerText;
+        document.querySelector('#charging-time').innerHTML = `<ion-icon name="battery-charging-outline"></ion-icon>`;
+      }
+
+      else {
+        charge.classList.remove("active");
+
+        if (parseInt(battery.dischargingTime)) {
+          charge.classList.add("s");
+          chargingTimeRef.innerText;
+          document.querySelector('#charging-time').innerHTML = `<ion-icon name="battery-full-outline"></ion-icon>`;
+        }
+
+      }
+    }
+
+    function updateLevelInfo() {
+      let batteryLevel = `${parseInt(battery.level * 100)}%`;
+      charge.style.width = batteryLevel;
+      chargeLevel.textContent = batteryLevel;
+    }
+  });
+  </script>
+</body>
+</html>
