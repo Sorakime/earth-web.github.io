@@ -58,8 +58,7 @@ navigator.getBattery().then((battery) => {
   function updateChargingInfo() {
     if (battery.charging) {
       charge.classList.add("active");
-      chargingTimeRef.innerText = `s`;
-      document.querySelector('#charging-time').innerHTML = `<ion-icon name="battery-charging-outline"></ion-icon>`;
+      chargingTimeRef.querySelector.innerText = `s`;
     } else {
       charge.classList.remove("active");
 
