@@ -57,13 +57,14 @@ navigator.getBattery().then((battery) => {
   function updateChargingInfo() {
     if (battery.charging) {
       charge.classList.add("active");
-      chargingTimeRef.innerText = "";
+      chargingTimeRef.innerText = "充電中";
     } else {
       charge.classList.remove("active");
 
       //Display time left to discharge only when it is a integer value i.e not infinity
       if (parseInt(battery.dischargingTime)) {
         chargingTimeRef.innerText = `残り`;
+      }
       }
     }
   }
