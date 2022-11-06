@@ -6,16 +6,12 @@
 <h1>このページにアクセスした時点でのバッテリー情報</h1>
 <ul>
   <li>バッテリー残量(%)：<span id="level"></span>[%]
-  <li>バッテリー残量(秒):<span id="dischargingTime"></span>[s]
   <li>充電中(true/false):<span id="charging"></span>
-  <li>充電完了までの時間:<span id="chargingTime"></span>[s]
 </ul>
  
 <script>
 navigator.getBattery().then(function(battery) {
   document.getElementById('level').innerHTML = battery.level;
   document.getElementById('charging').innerHTML = battery.charging;
-  document.getElementById('chargingTime').innerHTML = battery.chargingTime;
-  document.getElementById('dischargingTime').innerHTML = battery.dischargingTime;
 });
 </script>
