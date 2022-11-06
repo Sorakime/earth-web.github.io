@@ -57,7 +57,7 @@ navigator.getBattery().then((battery) => {
   function updateChargingInfo() {
     if (battery.charging) {
       charge.classList.add("active");
-      chargingTimeRef.innerText = "充電中";
+      chargingTimeRef.innerText = "";
     } else {
       charge.classList.remove("active");
 
