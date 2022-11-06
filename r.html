@@ -14,6 +14,9 @@
 </head>
 <body>
     <div class="container">
+      <div id="battery">
+        <div id="charge"></div>
+      </div>
       <div id="charging-time"><ion-icon name="battery-full-outline"></ion-icon></div>
     </div>
 </body>
@@ -59,7 +62,7 @@ navigator.getBattery().then((battery) => {
       document.querySelector('#charging-time').innerHTML = `<ion-icon name="battery-charging-outline"></ion-icon>`;
     } else {
       charge.classList.remove("active");
-
+      
       if (parseInt(battery.dischargingTime)) {
         chargingTimeRef.innerText;
         document.querySelector('#charging-time').innerHTML = `<ion-icon name="battery-full-outline"></ion-icon>`;
