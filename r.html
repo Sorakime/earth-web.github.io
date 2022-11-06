@@ -20,12 +20,8 @@
     </div>
   </ul>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script>
-  navigator.getBattery().then(function(battery) {
-    document.getElementById('level').innerHTML = (battery.level * 100);
-
-  });const chargeLevel = document.getElementById("charge-level");
+  const chargeLevel = document.getElementById("charge-level");
   const charge = document.getElementById("charge");
   const chargingTimeRef = document.getElementById("charging-time");
 
