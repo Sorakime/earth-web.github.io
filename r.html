@@ -58,14 +58,14 @@ navigator.getBattery().then((battery) => {
   function updateChargingInfo() {
     if (battery.charging) {
       charge.classList.add("active");
-      chargingTimeRef.innerText;
+      chargingTimeRef.querySelector.innerText;
+      document.querySelector('#charging-time').innerHTML = `<ion-icon name="battery-full-outline"></ion-icon>`;
     } else {
       charge.classList.remove("active");
 
 
       if (parseInt(battery.dischargingTime)) {
-        chargingTimeRef.querySelector.innerText;
-        document.querySelector('#charging-time').innerHTML = `<ion-icon name="battery-full-outline"></ion-icon>`;
+        chargingTimeRef.innerText;
       }
     }
   }
