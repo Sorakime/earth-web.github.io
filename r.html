@@ -9,7 +9,7 @@
 <body>
   <h1>バッテリー情報</h1>
   <ul>
-    <li>バッテリー残量(%):<span id="level"></span>[%]
+    <li>バッテリー残量:<span id="level"></span>%
     <script type="text/javascript" src="js/sample.js"></script>
     <div class="container">
       <div id="battery">
@@ -27,7 +27,6 @@
 
   navigator.getBattery().then((battery) => {
     function updateAllBatteryInfo(e) {
-      console.log(e);
       updateChargingInfo();
       updateLevelInfo();
     }
