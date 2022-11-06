@@ -26,7 +26,7 @@
   const chargingTimeRef = document.getElementById("charging-time");
 
   navigator.getBattery().then((battery) => {
-    function updateAllBatteryInfo(e) {
+    function updateAllBatteryInfo() {
       updateChargingInfo();
       updateLevelInfo();
     }
