@@ -6,12 +6,16 @@
 <h1>バッテリー情報</h1>
 <ul>
   <li>バッテリー残量(%):<span id="level"></span>[%]
-  <li>充電中(true/false):<span id="charging"></span>
+  <li>充電中:<span id="charging" class="charging"></span>
 </ul>
  
 <script>
 navigator.getBattery().then(function(battery) {
   document.getElementById('level').innerHTML = (battery.level * 100);
   document.getElementById('charging').innerHTML = battery.charging;
+  const charging = 'charging';
+  const regex = /charging/i;
+  document.getElementById("charging").innerHTML = (charging.replace(regex, 'dsadsa'));
+
 });
 </script>
