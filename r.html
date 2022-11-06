@@ -46,12 +46,10 @@ navigator.getBattery().then((battery) => {
   }
   updateAllBatteryInfo();
 
-  //When the charging status changes
   battery.addEventListener("chargingchange", () => {
     updateAllBatteryInfo();
   });
 
-  //When the Battery Levvel Changes
   battery.addEventListener("levelchange", () => {
     updateAllBatteryInfo();
   });
@@ -62,16 +60,17 @@ navigator.getBattery().then((battery) => {
       chargingTimeRef.innerText;
       document.querySelector('#charging-time').innerHTML = `<ion-icon name="battery-charging-outline"></ion-icon>`;
     } else {
-      charge.classList.remove("active");
+      charge.classList.remove("active" ,"s");
       
       if (parseInt(battery.dischargingTime)) {
+        charge.classList.add("s");
         chargingTimeRef.innerText;
         document.querySelector('#charging-time').innerHTML = `<ion-icon name="battery-full-outline"></ion-icon>`;
       }
+      
     }
   }
 
-  //Updating battery level
   function updateLevelInfo() {
     let batteryLevel = `${parseInt(battery.level * 100)}%`;
     charge.style.width = batteryLevel;
