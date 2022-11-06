@@ -11,7 +11,7 @@
  
 <script>
 navigator.getBattery().then(function(battery) {
-  document.getElementById('level').innerHTML = battery.level(level * x);
+  document.getElementById('level').innerHTML = battery(level * x).level;
   document.getElementById('charging').innerHTML = battery.charging;
 
   const x = 10;
