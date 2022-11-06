@@ -26,43 +26,34 @@
   const chargingTimeRef = document.getElementById("charging-time");
 
   navigator.getBattery().then((battery) => {
-    function updateAllBatteryInfo() {
+    function updateAllBatteryInfo(e) {
+      console.log(e);
       updateChargingInfo();
       updateLevelInfo();
     }
     updateAllBatteryInfo();
 
-    battery.addEventListener("chargingchange", () => {
-      updateAllBatteryInfo();
-    });
+    battery.addEventListener("chargingchange", updateAllBatteryInfo);
 
-    battery.addEventListener("levelchange", () => {
-      updateAllBatteryInfo();
-    });
+    battery.addEventListener("levelchange", updateAllBatteryInfo);
 
     function updateChargingInfo() {
       if (battery.charging) {
         charge.classList.add("active");
-        chargingTimeRef.innerText;
-        document.querySelector('#charging-time').innerHTML = `<ion-icon name="battery-charging-outline"></ion-icon>`;
-      }
-
-      else {
+        document.getElementById("charging-time").innerHTML = `<ion-icon name="battery-charging-outline"></ion-icon>`;
+      } else {
         charge.classList.remove("active");
-
-        if (parseInt(battery.dischargingTime)) {
-          charge.classList.add("s");
-          chargingTimeRef.innerText;
-          document.querySelector('#charging-time').innerHTML = `<ion-icon name="battery-full-outline"></ion-icon>`;
-        }
-
+        charge.classList.add("s");
+        chargingTimeRef.innerText;
+        document.getElementById("charging-time").innerHTML = `<ion-icon name="battery-full-outline"></ion-icon>`;
       }
     }
 
     function updateLevelInfo() {
-      let batteryLevel = `${parseInt(battery.level * 100)}%`;
+      const batteryLevel = `${parseInt(battery.level * 100)}%`;
       charge.style.width = batteryLevel;
       chargeLevel.textContent = batteryLevel;
+      document.getElementById("level").innerHTML = batteryLevel;
     }
   });
   </script>
