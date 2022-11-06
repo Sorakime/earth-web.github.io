@@ -58,11 +58,11 @@ navigator.getBattery().then((battery) => {
   function updateChargingInfo() {
     if (battery.charging) {
       charge.classList.add("active");
-      chargingTimeRef.querySelector.innerText;
+      chargingTimeRef.innerText;
     } else {
       charge.classList.remove("active");
 
-      //Display time left to discharge only when it is a integer value i.e not infinity
+
       if (parseInt(battery.dischargingTime)) {
         chargingTimeRef.querySelector.innerText;
         document.querySelector('#charging-time').innerHTML = `<ion-icon name="battery-full-outline"></ion-icon>`;
