@@ -18,9 +18,11 @@
         <div id="charge"></div>
         <div id="charge-level"></div>
       </div>
-      <div id="charging-time"></div>
+      <div id="charging-time"><ion-icon name="battery-charging-outline"></ion-icon></div>
     </div>
 </body>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <script>
 navigator.getBattery().then(function(battery) {
   document.getElementById('level').innerHTML = (battery.level * 100);
@@ -57,13 +59,13 @@ navigator.getBattery().then((battery) => {
   function updateChargingInfo() {
     if (battery.charging) {
       charge.classList.add("active");
-      chargingTimeRef.innerText = "充電";
+      chargingTimeRef.innerText = "";
     } else {
       charge.classList.remove("active");
 
       //Display time left to discharge only when it is a integer value i.e not infinity
       if (parseInt(battery.dischargingTime)) {
-        chargingTimeRef.innerText = `残り`;
+        chargingTimeRef.querySelector('#charging-time').innerHTML = `<ion-icon name="battery-full-outline"></ion-icon>`;
       }
     }
   }
