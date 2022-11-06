@@ -60,6 +60,11 @@ navigator.getBattery().then((battery) => {
       chargingTimeRef.innerText = "";
     } else {
       charge.classList.remove("active");
+
+      //Display time left to discharge only when it is a integer value i.e not infinity
+      if (parseInt(battery.dischargingTime)) {
+        chargingTimeRef.innerText = `残り`;
+      }
     }
   }
 
